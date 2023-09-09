@@ -9,22 +9,38 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {AutoCompleteModule} from 'primeng/autocomplete';
 import {CountryService} from './services/countryservice';
 import {AutoCompleteComponent} from './CommonComponents/auto-complete/auto-complete.component';
-import {WrapperComponent} from './CommonComponents/wrapper/wrapper.component';
+import { MultiSelectComponent } from './CommonComponents/multi-select/multi-select.component';
+import { MultiSelectModule } from 'primeng/multiselect';
+import { PopupComponent } from './CommonComponents/popup/popup.component';
+import { DynamicDialogModule } from 'primeng/dynamicdialog';
+import { ButtonModule } from 'primeng/button';
+import { ToastModule } from 'primeng/toast';
+import {PopupContent} from './CommonComponents/popup/popupContent';
+import { DialogService } from 'primeng/dynamicdialog';
+import {MessageService} from 'primeng/api';
+
+
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
     AutoCompleteComponent,
-    WrapperComponent
+    MultiSelectComponent,
+    PopupComponent,
+    PopupContent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,
-    AutoCompleteModule
+    AutoCompleteModule,
+    MultiSelectModule,
+    DynamicDialogModule,
+    ToastModule,
+    ButtonModule
   ],
-  providers: [CountryService],
+  providers: [CountryService,DialogService,MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
