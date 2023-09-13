@@ -6,6 +6,20 @@
   <app-popup></app-popup>
 </div>
 
+<div class="p-3 m-2">
+  <angular-file-uploader
+    [config]="afuConfig"
+    [resetUpload]="resetVar"
+    (fileSelected)="fileSelected($event)"
+    (ApiResponse)="docUpload($event)"
+  >
+  </angular-file-uploader>
+</div>
+
+<p-toast key="c"></p-toast>
+<p-toast position="top-center" key="tc"></p-toast>
+<p-confirmDialog [style]="{width: '30vw'}"></p-confirmDialog>
+
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
 <!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->

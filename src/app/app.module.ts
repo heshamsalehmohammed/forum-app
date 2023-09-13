@@ -17,7 +17,13 @@ import { ButtonModule } from 'primeng/button';
 import { ToastModule } from 'primeng/toast';
 import {PopupContent} from './CommonComponents/popup/popupContent';
 import { DialogService } from 'primeng/dynamicdialog';
-import {MessageService} from 'primeng/api';
+import {ConfirmationService, MessageService} from 'primeng/api';
+import { AngularFileUploaderComponent } from './CommonComponents/angular-file-uploader/angular-file-uploader.component';
+import {CommonModule} from '@angular/common';
+import {HttpClientModule} from '@angular/common/http';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
+import { ConfirmDialogModule } from 'primeng/confirmdialog';
+
 
 
 @NgModule({
@@ -27,7 +33,8 @@ import {MessageService} from 'primeng/api';
     AutoCompleteComponent,
     MultiSelectComponent,
     PopupComponent,
-    PopupContent
+    PopupContent,
+    AngularFileUploaderComponent
   ],
   imports: [
     BrowserModule,
@@ -38,9 +45,13 @@ import {MessageService} from 'primeng/api';
     MultiSelectModule,
     DynamicDialogModule,
     ToastModule,
-    ButtonModule
+    ButtonModule,
+    CommonModule,
+    HttpClientModule,
+    FontAwesomeModule,
+    ConfirmDialogModule
   ],
-  providers: [CountryService,DialogService,MessageService],
+  providers: [CountryService,DialogService,MessageService,ConfirmationService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
