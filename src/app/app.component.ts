@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {PopupContent} from './CommonComponents/popup/popupContent';
 
 @Component({
   selector: 'app-root',
@@ -6,6 +7,10 @@ import {Component} from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
+
+
+  popupContent = PopupContent;
+
   afuConfig: any={
     multiple: true,
     formatsAllowed: "*",

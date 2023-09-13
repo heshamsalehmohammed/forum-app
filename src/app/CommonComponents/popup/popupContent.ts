@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DynamicDialogRef } from 'primeng/dynamicdialog';
 
 @Component({
-    template: `hesham`
+    template: `hesham hamada`
 })
 export class PopupContent implements OnInit {
     
